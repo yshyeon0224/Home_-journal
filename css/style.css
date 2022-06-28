@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KoPubDotumMedium';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    /* 다이어리체 */
+    font-family: 'EarlyFontDiary';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    /* 강원교육모두체 Bold */
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+}
+
+:root {
+    /* color */
+    --green: #136149;
+    --grey: #969696;
+    --dark-grey: #404040;
+    /* font size */
+    --font-size1: 1.3rem;
+    --font-size2: 1.7rem;
+
+    --s-font: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;;
+}
+h1,h2,h3,h4{
+    font-family: 'S-CoreDream-3Light';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'KoPubDotumMedium';
+    position: relative;
+    font-size: var(--font-size1);
+    color: var(--dark-grey);
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    transition: .34s;
+}
+.item-link:link { /*링크 방문 전*/
+    color: var(--dark-grey);
+}
+.item-link:visited { /*링크를 방문한 이후*/
+    color: var(--dark-grey);
+}
+.item-link:hover { /*마우스를 올려놓을 때*/
+    color: var(--green);
+    font-size: 1.4rem;
+}
+.under-line{
+    position: absolute;
+    max-width: 100%;
+}
+nav{
+    height: 6rem;
+    display: flex; /* 기본값 : 수평 방향 */
+    justify-content: center;
+    align-items: flex-end;
+
+}
+.h-menu{
+    display: none; /* 숨기기 */
+}
+header{
+    position:fixed;  /* 스크롤해도 헤더 위치가 바뀌지 않음 */
+    left:0;
+    right:0;
+    top:0;
+}
+.item{
+    display: flex;
+    column-gap: 7rem; /* 20px */
+    color: var(--dark-grey);
+    margin-bottom: 20px;
+}
+
+main {
+    margin-top: 137px;
+    font-family: 'KoPubDotumMedium';
+}
+.shop {
+    margin-left: 120px;
+    color: var(--green);
+}
+#slideShow{
+    position: relative;
+    margin: 50px auto;
+    flex-shrink: 1;
+    justify-content: center;
+}
+.slides {
+    justify-content: space-between;
+}
