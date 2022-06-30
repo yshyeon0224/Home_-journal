@@ -28,11 +28,10 @@
     --green: #136149;
     --grey: #969696;
     --dark-grey: #404040;
+    --base : #F5F5F5;
     /* font size */
     --font-size1: 1.3rem;
     --font-size2: 1.7rem;
-
-    --s-font: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;;
 }
 h1,h2,h3,h4{
     font-family: 'S-CoreDream-3Light';
@@ -44,7 +43,9 @@ h1,h2,h3,h4{
     box-sizing: border-box;
 }
 
+
 body {
+    margin: 63px;
     font-family: 'KoPubDotumMedium';
     position: relative;
     font-size: var(--font-size1);
@@ -57,6 +58,9 @@ a {
     text-decoration: none;
     transition: .34s;
 }
+.item-link {
+    font-size: var(--font-size1);
+}
 .item-link:link { /*링크 방문 전*/
     color: var(--dark-grey);
 }
@@ -67,47 +71,122 @@ a {
     color: var(--green);
     font-size: 1.4rem;
 }
-.under-line{
-    position: absolute;
-    max-width: 100%;
-}
-nav{
-    height: 6rem;
-    display: flex; /* 기본값 : 수평 방향 */
+.nav-contaner{
     justify-content: center;
-    align-items: flex-end;
-
+}
+.under-line{
+    max-width: 78%;
+    margin: 30px 10%;
+    display: flex;
+    justify-content: center;
+}
+.list {
+    display: flex;
+    justify-content: center;
 }
 .h-menu{
     display: none; /* 숨기기 */
 }
-header{
-    position:fixed;  /* 스크롤해도 헤더 위치가 바뀌지 않음 */
-    left:0;
-    right:0;
-    top:0;
-}
 .item{
+    column-gap: 7rem;
     display: flex;
-    column-gap: 7rem; /* 20px */
     color: var(--dark-grey);
-    margin-bottom: 20px;
 }
-
+/* 강매 페이ㅣㅈ */
 main {
-    margin-top: 137px;
     font-family: 'KoPubDotumMedium';
 }
+.slideShow{
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    margin: 1.2rem 0;
+}
 .shop {
-    margin-left: 120px;
+    font-size: 1.4rem;
     color: var(--green);
 }
-#slideShow{
-    position: relative;
-    margin: 50px auto;
-    flex-shrink: 1;
-    justify-content: center;
+.slide {
+    margin: 4rem 8rem;
 }
 .slides {
-    justify-content: space-between;
+    flex: 1 1 auto;
+}
+img {
+    max-width: 1170px;
+}
+.feather {
+    align-items: center;
+    width: 63px;
+    height: 63px;
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    margin: 6rem 0;
+  }
+
+  /* 지구 머식; */
+.check{
+    margin: 8rem;
+  }
+.popch {
+    font-size: 1.4rem;
+    color: var(--green);
+}
+.cards {
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+.card {
+    background-color: #f3f3f3;
+    border-radius: 1rem;
+    flex: 1 0 240px;
+    transition: .4s;
+}
+.card-description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1rem;
+}
+.card-title {
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+}
+.card-image {
+    background: url("../img/풀.jpg") center center;
+    background-size: cover;
+    height: 0;
+    padding-bottom: 70%;
+    border-radius: 1rem 1rem 0 0;
+}
+.card-m{
+    font-size: var(--font-size1);
+}
+
+/* q비비건 */
+.vginpo{
+    margin: 8rem;
+}
+.vg-m{
+    font-size: 1.5rem;
+    color: var(--green);
+}
+.vgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+/* 태블ㅇㄹ시 */
+@media screen and (max-width: 600px) {
+    .feather{
+        display: none;
+    }
 }
